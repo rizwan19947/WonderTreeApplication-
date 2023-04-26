@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'world-tree'`, () => {
+  it(`should have as title 'wonder-tree'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('world-tree');
+    expect(app.title).toEqual('wonder-tree');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('world-tree app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('wonder-tree app is running!');
   });
 });
