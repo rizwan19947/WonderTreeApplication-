@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { UserService } from './user.service';
-
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 
@@ -23,17 +22,13 @@ export class FirebaseService {
   }
 
   async signIn(email: string, password: string) {
-    const result = await this.firebaseAuth.signInWithEmailAndPassword(
-      email,
-      password
-    );
+    const result: firebase.auth.UserCredential =
+      await this.firebaseAuth.signInWithEmailAndPassword(email, password);
   }
 
   async signUp(email: string, password: string, name: string) {
-    const result = await this.firebaseAuth.createUserWithEmailAndPassword(
-      email,
-      password
-    );
+    const result: firebase.auth.UserCredential =
+      await this.firebaseAuth.createUserWithEmailAndPassword(email, password);
     await result.user?.updateProfile({ displayName: name });
   }
 

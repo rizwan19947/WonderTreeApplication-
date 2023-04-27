@@ -8,6 +8,8 @@ import { getFirestore, Firestore } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { environment } from 'src/environments/environment';
 import { HomeComponent } from './home/home.component';
+import { NgOptimizedImage } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 export const FirestoreInstance = new InjectionToken<Firestore>(
   'FirestoreInstance'
@@ -21,6 +23,8 @@ export const FirestoreInstance = new InjectionToken<Firestore>(
     provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
     AngularFireModule,
     AngularFireAuthModule,
+    NgOptimizedImage,
+    ReactiveFormsModule,
   ],
   providers: [
     { provide: FirestoreInstance, useFactory: getFirestore, deps: [getApp] },

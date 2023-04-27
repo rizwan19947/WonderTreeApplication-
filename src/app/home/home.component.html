@@ -1,1 +1,106 @@
-<p>home works!</p>
+<div class="landing-background"></div>
+
+<div class="auth-container">
+  <ng-container *ngIf="signIn === false && signUp === false">
+    <h1 class="landing-title">Welcome</h1>
+    <button
+      (click)="showSignInForm()"
+      class="btn btn-dark landing-button"
+      type="button"
+    >
+      Sign In
+    </button>
+    <button
+      (click)="showSignUpForm()"
+      class="btn btn-dark landing-button"
+      type="button"
+    >
+      Sign Up
+    </button>
+  </ng-container>
+
+  <ng-container *ngIf="signIn">
+    <form (submit)="doSignIn()" [formGroup]="signInForm" id="signIn">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">@</span>
+        <input
+          class="input-group-text"
+          formControlName="email"
+          id="email"
+          placeholder="Email Address"
+          type="text"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon2">#</span>
+        <input
+          class="input-group-text"
+          formControlName="password"
+          id="password"
+          placeholder="Password"
+          type="password"
+        />
+      </div>
+    </form>
+    <button
+      *ngIf="signIn"
+      [disabled]="!signInForm.valid"
+      class="btn btn-dark landing-button"
+      type="submit"
+    >
+      Sign In
+    </button>
+  </ng-container>
+
+  <ng-container *ngIf="signUp">
+    <form (submit)="doSignUp()" [formGroup]="signUpForm" id="signUp">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon3">@</span>
+        <input
+          class="input-group-text"
+          formControlName="name"
+          id="name-register"
+          placeholder="Email Address"
+          type="text"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon4">~</span>
+        <input
+          class="input-group-text"
+          formControlName="email"
+          id="email-register"
+          placeholder="Your Name"
+          type="text"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon5">#</span>
+        <input
+          class="input-group-text"
+          formControlName="password"
+          id="password-register"
+          placeholder="Password"
+          type="password"
+        />
+      </div>
+    </form>
+
+    <button
+      *ngIf="signUp"
+      [disabled]="!signUpForm.valid"
+      class="btn btn-dark landing-button"
+      type="submit"
+    >
+      Sign Up
+    </button>
+  </ng-container>
+  <button
+    (click)="back()"
+    *ngIf="signIn || signUp"
+    class="btn btn-dark landing-button"
+    type="button"
+  >
+    Back
+  </button>
+</div>

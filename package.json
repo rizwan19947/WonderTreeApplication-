@@ -10,7 +10,9 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-devkit/schematics": "15.2.7",
     "@angular/animations": "^14.1.0",
+    "@angular/cdk": "^15.2.8",
     "@angular/common": "^14.1.0",
     "@angular/compiler": "^14.1.0",
     "@angular/core": "^14.1.0",
@@ -21,7 +23,7 @@
     "@angular/router": "^14.1.0",
     "ajv-formats": "^2.1.1",
     "bootstrap": "^5.2.3",
-    "chart.js": "^4.2.1",
+    "d3": "^7.8.4",
     "firebase": "^9.20.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
