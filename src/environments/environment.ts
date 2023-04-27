@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig: {
+    apiKey: 'AIzaSyBbHVTSHwCkmQfFDDHoygcre9rT0afiTOI',
+    authDomain: 'wonder-tree-angular.firebaseapp.com',
+    projectId: 'wonder-tree-angular',
+    storageBucket: 'wonder-tree-angular.appspot.com',
+    messagingSenderId: '914110173348',
+    appId: '1:914110173348:web:b66d3394b571c4a9e8d631',
+  },
 };
 
 /*
