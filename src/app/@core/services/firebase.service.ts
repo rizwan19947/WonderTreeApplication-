@@ -1,33 +1,32 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { UserService } from './user.service';
 
-export interface User {
-  userId: string;
-  userEmail: string | null;
-}
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FirebaseService {
-  user: User | null = null;
-  private isLoggedIn: boolean = false;
-
-  constructor(public firebaseAuth: AngularFireAuth) {
+  constructor(
+    public firebaseAuth: AngularFireAuth,
+    private userService: UserService
+  ) {
     firebaseAuth.onAuthStateChanged((user) => {
       if (user) {
-        this.user = {
-          userId: user.uid,
-          userEmail: user.email,
-        };
+        this.userService.currentUser = user;
       } else {
-        this.user = null;
+        this.userService.currentUser = undefined;
       }
     });
   }
 
   async signIn(email: string, password: string) {
-    await this.firebaseAuth.signInWithEmailAndPassword(email, password);
+    const result = await this.firebaseAuth.signInWithEmailAndPassword(
+      email,
+      password
+    );
   }
 
   async signUp(email: string, password: string, name: string) {
