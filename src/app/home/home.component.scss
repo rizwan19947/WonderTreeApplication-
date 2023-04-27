@@ -31,8 +31,9 @@
     padding: 72px;
 
     @media (max-width: 580px) {
-      max-width: 272px;
-      max-height: 400px;
+      max-width: 320px;
+      max-height: 450px;
+      padding: 24px;
     }
 
     animation: fadeIn .5s ease-in forwards;
