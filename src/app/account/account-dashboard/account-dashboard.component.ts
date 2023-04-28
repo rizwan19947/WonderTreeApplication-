@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FirebaseService } from '../../@core/services/firebase.service';
 
 @Component({
   selector: 'app-account-dashboard',
@@ -7,7 +6,7 @@ import { FirebaseService } from '../../@core/services/firebase.service';
   styleUrls: ['./account-dashboard.component.scss'],
 })
 export class AccountDashboardComponent implements OnInit {
-  constructor(private firebaseService: FirebaseService) {}
+  constructor() {}
 
   ngOnInit(): void {}
 }

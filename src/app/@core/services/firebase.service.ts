@@ -9,7 +9,7 @@ import 'firebase/compat/auth';
 })
 export class FirebaseService {
   constructor(
-    public firebaseAuth: AngularFireAuth,
+    private firebaseAuth: AngularFireAuth,
     private userService: UserService
   ) {
     firebaseAuth.onAuthStateChanged((user) => {

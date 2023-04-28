@@ -7,8 +7,8 @@ import { provideFirebaseApp, initializeApp, getApp } from '@angular/fire/app';
 import { getFirestore, Firestore } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { environment } from 'src/environments/environment';
-import { FirebaseService } from './@core/services/firebase.service';
 import { HomeModule } from './home/home.module';
+import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 
 export const FirestoreInstance = new InjectionToken<Firestore>(
   'FirestoreInstance'
@@ -26,6 +26,7 @@ export const FirestoreInstance = new InjectionToken<Firestore>(
   ],
   providers: [
     { provide: FirestoreInstance, useFactory: getFirestore, deps: [getApp] },
+    { provide: FIREBASE_OPTIONS, useValue: environment.firebaseConfig },
   ],
   bootstrap: [AppComponent],
 })
