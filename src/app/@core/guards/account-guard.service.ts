@@ -23,7 +23,7 @@ export class AccountGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    if (this.userService.isLoggedIn) {
+    if (this.userService.isSignedIn) {
       return true;
     } else {
       return this.router.parseUrl('');

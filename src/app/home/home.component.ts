@@ -25,7 +25,10 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   signInForm: FormGroup = new FormGroup({
     email: new FormControl(null, Validators.required),
-    password: new FormControl(null, Validators.required),
+    password: new FormControl(null, [
+      Validators.required,
+      Validators.minLength(6),
+    ]),
   });
 
   private breakpointSubscription: Subscription | undefined;
@@ -39,7 +42,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    if (this.userService.isLoggedIn) {
+    if (this.userService.isSignedIn) {
       this.router.navigate(['account']);
     }
     this.isMobile$ = this.observer
@@ -67,6 +70,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   async doSignIn() {
     console.log('doing singin');
     const formValues = this.signInForm.getRawValue();
+    console.log(formValues.email);
+    console.log(formValues.password);
     try {
       await this.firebaseService
         .signIn(formValues.email, formValues.password)
@@ -81,6 +86,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   async doSignUp() {
     console.log('doing singup');
     const formValues = this.signUpForm.getRawValue();
+    console.log(formValues.email);
+    console.log(formValues.password);
+    console.log(formValues.name);
     try {
       await this.firebaseService
         .signUp(formValues.email, formValues.password, formValues.name)

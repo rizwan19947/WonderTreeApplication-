@@ -19,8 +19,7 @@ export const FirestoreInstance = new InjectionToken<Firestore>(
   imports: [
     BrowserModule,
     AppRoutingModule,
-    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
-    AngularFireModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     HomeModule,
   ],

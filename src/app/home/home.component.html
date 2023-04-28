@@ -20,7 +20,7 @@
   </ng-container>
 
   <ng-container *ngIf="signIn">
-    <form (submit)="doSignIn()" [formGroup]="signInForm" id="signIn">
+    <form [formGroup]="signInForm" id="signIn">
       <div class="input-group mb-3">
         <span class="input-group-text" id="basic-addon1">@</span>
         <input
@@ -28,7 +28,7 @@
           formControlName="email"
           id="email"
           placeholder="Email Address"
-          type="text"
+          type="email"
         />
       </div>
       <div class="input-group mb-3">
@@ -43,6 +43,7 @@
       </div>
     </form>
     <button
+      (click)="doSignIn()"
       *ngIf="signIn"
       [disabled]="!signInForm.valid"
       class="btn btn-dark landing-button"
@@ -53,22 +54,22 @@
   </ng-container>
 
   <ng-container *ngIf="signUp">
-    <form (submit)="doSignUp()" [formGroup]="signUpForm" id="signUp">
+    <form [formGroup]="signUpForm" id="signUp">
       <div class="input-group mb-3">
         <span class="input-group-text" id="basic-addon3">@</span>
         <input
           class="input-group-text"
-          formControlName="name"
+          formControlName="email"
           id="name-register"
           placeholder="Email Address"
-          type="text"
+          type="email"
         />
       </div>
       <div class="input-group mb-3">
         <span class="input-group-text" id="basic-addon4">~</span>
         <input
           class="input-group-text"
-          formControlName="email"
+          formControlName="name"
           id="email-register"
           placeholder="Your Name"
           type="text"
@@ -80,13 +81,14 @@
           class="input-group-text"
           formControlName="password"
           id="password-register"
-          placeholder="Password"
+          placeholder="Password (Min length: 6)"
           type="password"
         />
       </div>
     </form>
 
     <button
+      (click)="doSignUp()"
       *ngIf="signUp"
       [disabled]="!signUpForm.valid"
       class="btn btn-dark landing-button"

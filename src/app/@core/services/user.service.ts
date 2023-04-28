@@ -6,19 +6,37 @@ import 'firebase/compat/auth';
   providedIn: 'root',
 })
 export class UserService {
-  private user: firebase.User | undefined;
+  private user: any;
+  private isLoggedIn: boolean = false;
 
-  constructor() {}
+  constructor() {
+    this.setUserData();
+  }
 
-  public get currentUser(): any {
+  // public get currentUser(): firebase.User {
+  //   this.user ? return this.user : undefined;
+  // }
+  //
+  // public set currentUser(user: firebase.User | undefined) {
+  //   if (user) {
+  //     localStorage.setItem('currentUser', JSON.stringify(user));
+  //     this.user = user;
+  //     this.isLoggedIn = true;
+  //   }
+  // }
+
+  public get currentUser() {
     return this.user;
   }
 
-  public set currentUser(user: any) {
-    this.user = user;
+  public get isSignedIn(): boolean {
+    return this.isLoggedIn;
   }
 
-  public get isLoggedIn(): boolean {
-    return !!this.user;
+  public setUserData() {
+    if (localStorage.getItem('user')) {
+      this.user = localStorage.getItem('user');
+      this.isLoggedIn = true;
+    }
   }
 }
