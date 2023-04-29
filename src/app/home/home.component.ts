@@ -68,10 +68,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   async doSignIn() {
-    console.log('doing singin');
     const formValues = this.signInForm.getRawValue();
-    console.log(formValues.email);
-    console.log(formValues.password);
     try {
       await this.firebaseService
         .signIn(formValues.email, formValues.password)
@@ -84,11 +81,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   async doSignUp() {
-    console.log('doing singup');
     const formValues = this.signUpForm.getRawValue();
-    console.log(formValues.email);
-    console.log(formValues.password);
-    console.log(formValues.name);
     try {
       await this.firebaseService
         .signUp(formValues.email, formValues.password, formValues.name)
