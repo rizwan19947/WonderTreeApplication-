@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'bootstrap';
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100% !important;
+}
+
+body {
+  min-height: 100%;
+}
+
+
+* {
+  font-family: Lato, sans-serif;
+}
+
+:root {
+  ---header-height: 6.5rem;
+  ---header-z-index: 100;
+  ---primary-accent-color: #212529;
+}
+
+.btn {
+  border-radius: 12px;
+}
+
+.card {
+  border-radius: 12px;
+}
+
+.header-offset {
+  padding-top: var(---header-height);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+

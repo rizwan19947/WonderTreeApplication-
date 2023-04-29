@@ -1,0 +1,15 @@
+<div class="card">
+  <h5 class="card-header">Profile Information</h5>
+  <div class="card-body">
+    <h4><a class="bold">User Name:</a> {{ user.displayName }}</h4>
+    <h4><a class="bold">User Email:</a> {{ user.email }}</h4>
+    <h4 *ngIf="user.emailVerified" class="verified">
+      <a class="bold">Email Verification Status:</a>
+      Verified
+    </h4>
+    <h4 *ngIf="!user.emailVerified" class="invalid">
+      <a class="bold">Email Verification Status:</a>
+      Unverified
+    </h4>
+  </div>
+</div>

@@ -1,0 +1,104 @@
+:host {
+  position: relative;
+  background-color: black;
+  overflow: hidden;
+
+  .landing-background {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/assets/landing/frostwind-desktop.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: fadeIn .25s ease-in forwards;
+  }
+
+  .auth-container {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    max-width: 540px;
+    max-height: 620px;
+    border: none;
+    border-radius: 12px;
+    background-color: rgba(128, 128, 128, 0.25);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+    padding: 72px;
+
+    @media (max-width: 580px) {
+      max-width: 320px;
+      max-height: 450px;
+      padding: 24px;
+    }
+
+    animation: fadeIn .5s ease-in forwards;
+  }
+
+  .landing-button {
+    width: 100%;
+    max-width: 224px;
+    height: 48px;
+  }
+
+  .landing-title {
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: fit-content;
+  }
+
+  .span {
+    background-color: var(---primary-accent-color);
+    color: white;
+  }
+
+  #basic-addon1 {
+    color: white;
+    background-color: var(---primary-accent-color);
+    border: none;
+  }
+
+  #basic-addon2 {
+    color: white;
+    background-color: var(---primary-accent-color);
+    border: none;
+  }
+
+  #basic-addon3 {
+    color: white;
+    background-color: var(---primary-accent-color);
+    border: none;
+  }
+
+  #basic-addon4 {
+    color: white;
+    background-color: var(---primary-accent-color);
+    border: none;
+  }
+
+  #basic-addon5 {
+    color: white;
+    background-color: var(---primary-accent-color);
+    border: none;
+  }
+
+  .input-group-text {
+    color: white;
+    background-color: var(---primary-accent-color);
+    border: none;
+  }
+
+  #signIn {
+    animation: fadeIn .5s ease-in forwards;
+  }
+
+  #signUp {
+    animation: fadeIn .5s ease-in forwards;
+  }
+
+}
