@@ -21,6 +21,16 @@ body {
 
 :root {
   ---header-height: 6.5rem;
+  ---header-z-index: 100;
+  ---primary-accent-color: #212529;
+}
+
+.btn {
+  border-radius: 12px;
+}
+
+.card {
+  border-radius: 12px;
 }
 
 .header-offset {
@@ -35,3 +45,5 @@ body {
     opacity: 1;
   }
 }
+
+

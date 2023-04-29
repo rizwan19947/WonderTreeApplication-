@@ -13,20 +13,8 @@ export class UserService {
     this.setUserData();
   }
 
-  // public get currentUser(): firebase.User {
-  //   this.user ? return this.user : undefined;
-  // }
-  //
-  // public set currentUser(user: firebase.User | undefined) {
-  //   if (user) {
-  //     localStorage.setItem('currentUser', JSON.stringify(user));
-  //     this.user = user;
-  //     this.isLoggedIn = true;
-  //   }
-  // }
-
-  public get currentUser() {
-    return this.user;
+  public get currentUser(): firebase.User {
+    return JSON.parse(this.user);
   }
 
   public get isSignedIn(): boolean {

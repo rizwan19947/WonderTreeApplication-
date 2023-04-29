@@ -1,20 +1,25 @@
 :host {
   height: 100%;
 
+  .container {
+    padding: 36px;
+  }
+
   .navbar {
+    z-index: var(---header-z-index);
     width: 100vw;
     max-height: 60px;
+    overflow-y: hidden;
     @media (max-width: 580px) {
-      position: absolute;
-      bottom: 0;
+      position: fixed;
+      top: 0;
       left: 0;
-      object-fit: contain;
     }
   }
 
 
   .nav {
-    height: 40px;
+    max-height: 60px;
     width: 100%;
     justify-content: space-around;
     display: flex;
@@ -35,6 +40,10 @@
     text-align: center;
     color: white;
     border-radius: 12px;
+
+    &.log-out {
+      padding-top: 0;
+    }
   }
 
   .nav-item {

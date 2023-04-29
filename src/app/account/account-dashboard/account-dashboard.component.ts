@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../@core/services/user.service';
+import firebase from 'firebase/compat/app';
 
 @Component({
   selector: 'app-account-dashboard',
@@ -7,9 +8,11 @@ import { UserService } from '../../@core/services/user.service';
   styleUrls: ['./account-dashboard.component.scss'],
 })
 export class AccountDashboardComponent implements OnInit {
-  constructor(private userService: UserService) {}
+  user: firebase.User;
 
-  ngOnInit(): void {
-    console.warn(JSON.parse(this.userService.currentUser));
+  constructor(private userService: UserService) {
+    this.user = this.userService.currentUser;
   }
+
+  ngOnInit(): void {}
 }
