@@ -1,1 +1,42 @@
+<nav *ngIf="userService.isSignedIn" class="navbar bg-dark">
+  <ul class="nav">
+    <li class="nav-item">
+      <a
+        [routerLinkActiveOptions]="{ exact: true }"
+        [routerLinkActive]="'active'"
+        [routerLink]="'/account'"
+        aria-current="page"
+        class="nav-link"
+        >Account</a
+      >
+    </li>
+    <li class="nav-item">
+      <a
+        [routerLinkActiveOptions]="{ exact: true }"
+        [routerLinkActive]="'active'"
+        [routerLink]="'/account/profile'"
+        aria-current="page"
+        class="nav-link"
+        >Profile</a
+      >
+    </li>
+    <li class="nav-item">
+      <a
+        [routerLinkActiveOptions]="{ exact: true }"
+        [routerLinkActive]="'active'"
+        [routerLink]="'/account/analytics'"
+        aria-current="page"
+        class="nav-link"
+        >Analytics</a
+      >
+    </li>
+    <li *ngIf="(isMobile$ | async) === false" class="nav-item logout">
+      <a class="nav-link">
+        <button (click)="signOut()" class="btn btn-outline-light">
+          Log Out
+        </button>
+      </a>
+    </li>
+  </ul>
+</nav>
 <router-outlet></router-outlet>
