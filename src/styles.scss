@@ -20,9 +20,14 @@ body {
 }
 
 :root {
-  ---header-height: 6.5rem;
+  ---header-offset: 80px;
   ---header-z-index: 100;
   ---primary-accent-color: #212529;
+}
+
+.container {
+  margin-top: var(---header-offset);
+  padding: 24px;
 }
 
 .btn {
@@ -34,7 +39,7 @@ body {
 }
 
 .header-offset {
-  padding-top: var(---header-height);
+  margin-top: var(---header-offset);
 }
 
 @keyframes fadeIn {

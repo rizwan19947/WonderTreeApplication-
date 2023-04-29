@@ -1,29 +1,31 @@
-<h1 class="left-padded">Dashboard</h1>
-<div class="card">
-  <h5 class="card-header">Welcome {{ user.displayName }}!</h5>
-  <div class="card-body">
-    <h4>
-      Your profile page will display the information associated with your user
-      account
-    </h4>
-    <br />
-    <a [routerLink]="'/account/profile'" class="btn btn-dark btn-heavy"
-      >Go to profile detail</a
-    >
+<div class="container">
+  <h1 class="left-padded">Dashboard</h1>
+  <div class="card">
+    <h5 class="card-header">Welcome {{ user.displayName }}!</h5>
+    <div class="card-body">
+      <h4>
+        Your profile page will display the information associated with your user
+        account
+      </h4>
+      <br />
+      <a [routerLink]="'/account/profile'" class="btn btn-dark btn-heavy"
+        >Go to profile detail</a
+      >
+    </div>
   </div>
-</div>
-<div class="card">
-  <h5 class="card-header">Your Data Visualized</h5>
-  <div class="card-body">
-    <h4>Data visualizations utilizing the D3 library</h4>
-    <p class="card-text">
-      The 'Analytics' section provides the user with visualizations of data
-      retrieved using Angular HTTPCients's requests. Consequently, the
-      visualizations are performed using the D3.js Library.
-    </p>
-    <br />
-    <a [routerLink]="'/account/analytics'" class="btn btn-dark btn-heavy"
-      >Go to Analytics</a
-    >
+  <div class="card">
+    <h5 class="card-header">Your Data Visualized</h5>
+    <div class="card-body">
+      <h4>Data visualizations utilizing the D3 library</h4>
+      <p class="card-text">
+        The 'Analytics' section provides the user with visualizations of data
+        retrieved using Angular HTTPCients's requests. Consequently, the
+        visualizations are performed using the D3.js Library.
+      </p>
+      <br />
+      <a [routerLink]="'/account/analytics'" class="btn btn-dark btn-heavy"
+        >Go to Analytics</a
+      >
+    </div>
   </div>
 </div>
