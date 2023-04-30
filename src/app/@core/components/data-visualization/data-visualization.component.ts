@@ -17,13 +17,6 @@ export class DataVisualizationComponent implements OnInit {
       const chartElement = document.getElementById(
         'myChart'
       ) as HTMLCanvasElement;
-      if (chartElement) {
-        const ctx = chartElement.getContext('2d');
-        // Rest of the chart code here
-      } else {
-        alert('Could not find chart element');
-        return;
-      }
 
       const completedData = data.map((item) => item.completed);
       const notCompletedData = data.map((item) => item.notCompleted);
