@@ -1,4 +1,8 @@
 :host {
+  .container {
+    animation: slideIn .25s ease-in forwards;
+  }
+
   .card {
     margin-top: 24px;
   }

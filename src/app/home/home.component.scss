@@ -6,7 +6,7 @@
   .landing-background {
     width: 100vw;
     height: 100vh;
-    background-image: url("/assets/landing/frostwind-desktop.png");
+    background-image: url("/assets/landing/typewriter.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -26,8 +26,8 @@
     max-height: 620px;
     border: none;
     border-radius: 12px;
-    background-color: rgba(128, 128, 128, 0.25);
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+    background-color: rgba(38, 32, 29, 0.9);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     padding: 72px;
 
     @media (max-width: 580px) {
@@ -46,6 +46,8 @@
   }
 
   .landing-title {
+    font-weight: bold;
+    text-decoration: underline;
     color: white;
     text-align: center;
     width: 100%;

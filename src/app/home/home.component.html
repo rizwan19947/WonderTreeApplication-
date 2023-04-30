@@ -5,14 +5,14 @@
     <h1 class="landing-title">Welcome</h1>
     <button
       (click)="showSignInForm()"
-      class="btn btn-dark landing-button"
+      class="btn btn-outline-light landing-button"
       type="button"
     >
       Sign In
     </button>
     <button
       (click)="showSignUpForm()"
-      class="btn btn-dark landing-button"
+      class="btn btn-outline-light landing-button"
       type="button"
     >
       Sign Up
@@ -46,7 +46,7 @@
       (click)="doSignIn()"
       *ngIf="signIn"
       [disabled]="!signInForm.valid"
-      class="btn btn-dark landing-button"
+      class="btn btn-outline-light landing-button"
       type="submit"
     >
       Sign In
@@ -91,7 +91,7 @@
       (click)="doSignUp()"
       *ngIf="signUp"
       [disabled]="!signUpForm.valid"
-      class="btn btn-dark landing-button"
+      class="btn btn-outline-light landing-button"
       type="submit"
     >
       Sign Up
@@ -100,7 +100,7 @@
   <button
     (click)="back()"
     *ngIf="signIn || signUp"
-    class="btn btn-dark landing-button"
+    class="btn btn-outline-light landing-button"
     type="button"
   >
     Back
