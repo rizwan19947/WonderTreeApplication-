@@ -8,14 +8,14 @@ import { groupBy, map, mergeMap, reduce } from 'rxjs/operators';
 export class DataVisualizationService {
   constructor(private httpClient: HttpClient) {}
 
-  /**
-   * Grouping the data in a suitable format to be able to provide usable data points from the initial ungrouped format
-   */
   public getTodoList() {
     return this.httpClient
       .get<any[]>('https://jsonplaceholder.typicode.com/todos')
       .pipe(
         map((todos: any[]) => {
+          /**
+           * Grouping the data in a suitable format to be able to provide usable data points from the initial ungrouped format
+           */
           const groupedData = todos.reduce((acc, curr) => {
             const { userId, completed } = curr;
             acc[userId] = acc[userId] || {

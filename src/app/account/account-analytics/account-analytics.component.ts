@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataVisualizationService } from '../../@core/services/data-visualization.service';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-account-analytics',
@@ -15,9 +14,5 @@ export class AccountAnalyticsComponent implements OnInit {
     this.todoList$ = visualizationService.getTodoList();
   }
 
-  ngOnInit(): void {
-    this.todoList$?.subscribe((data) => {
-      console.log(data);
-    });
-  }
+  ngOnInit(): void {}
 }
