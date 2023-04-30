@@ -1,0 +1,20 @@
+<div class="d-grid grid">
+  <div>
+    <button (click)="sortByCompleted(true)" class="btn btn-dark complete">
+      Sort by Completed Tasks (Ascending)
+    </button>
+    <button (click)="sortByCompleted(false)" class="btn btn-dark incomplete">
+      Sort by Completed Tasks (Descending)
+    </button>
+  </div>
+  <div>
+    <button (click)="sortByIncomplete(true)" class="btn btn-dark complete">
+      Sort by Incomplete Tasks (Ascending)
+    </button>
+    <button (click)="sortByIncomplete(false)" class="btn btn-dark incomplete">
+      Sort by Incomplete Tasks (Descending)
+    </button>
+  </div>
+</div>
+<br />
+<canvas id="myChart"></canvas>

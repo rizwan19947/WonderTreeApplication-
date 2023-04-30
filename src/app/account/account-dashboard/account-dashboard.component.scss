@@ -1,5 +1,9 @@
 :host {
 
+  .container {
+    animation: slideIn .25s ease-in forwards;
+  }
+
   .left-padded {
     padding-left: 16px;
   }

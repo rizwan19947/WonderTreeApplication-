@@ -13,15 +13,7 @@ export class FirebaseService {
     private firebaseAuth: AngularFireAuth,
     private userService: UserService,
     private router: Router
-  ) {
-    // firebaseAuth.onAuthStateChanged((user: firebase.User | null) => {
-    //   if (user) {
-    //     this.userService.setCurrentUser(user);
-    //   } else {
-    //     this.userService.setCurrentUser = undefined;
-    //   }
-    // });
-  }
+  ) {}
 
   async signIn(email: string, password: string) {
     await this.firebaseAuth.signInWithEmailAndPassword(email, password).then(

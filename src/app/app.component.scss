@@ -2,7 +2,7 @@
   height: 100%;
 
   .container {
-    padding: 36px;
+    padding: 0;
   }
 
   .navbar {
@@ -37,6 +37,7 @@
 
 
   .nav-link {
+    font-weight: bold;
     text-align: center;
     color: white;
     border-radius: 12px;
