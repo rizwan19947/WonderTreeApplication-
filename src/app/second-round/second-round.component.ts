@@ -67,7 +67,19 @@ export class SecondRoundComponent implements OnInit {
    */
   players: string[] = ["Ray Charles", "Saad Rana", "John Smith", "Mary Johnson", "Ahmed Khan", "Mohammad Ali", "Fatima Khalil", "Omar Saad", "Emily Martinez", "Sarah Wilson"];
 
+  isDropdownOpen = false;
+  selectedPlayer: string = '';
+
   constructor() {
+  }
+
+  selectPlayer(playerName: string) {
+    this.selectedPlayer = playerName;
+    this.isDropdownOpen = false;
+  }
+
+  toggleDropdown() {
+    this.isDropdownOpen = !this.isDropdownOpen;
   }
 
   ngOnInit(): void {

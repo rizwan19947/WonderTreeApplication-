@@ -37,17 +37,13 @@
       <button class="wonder-button add-fac">Add Facilitator</button>
     </div>
     <div>
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Dropdown button
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <h1>Players</h1>
+      <div class="custom-dropdown">
+        <button class="custom-dropdown-toggle" (click)="toggleDropdown()">{{selectedPlayer ? selectedPlayer : 'Select Player'}}</button>
+        <ul class="custom-dropdown-menu" [hidden]="!isDropdownOpen">
+          <li *ngFor="let player of players" (click)="selectPlayer(player)">{{ player }}</li>
         </ul>
       </div>
-      <h1>Players</h1>
 
     </div>
 
