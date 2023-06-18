@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'bootstrap';
+@import 'bootstrap/dist/css/bootstrap.min.css';
 
 html, body {
   padding: 0;
@@ -11,7 +12,7 @@ html {
 }
 
 body {
-  min-height: 100%;
+  //min-height: 100%;
 }
 
 
@@ -21,27 +22,39 @@ body {
 
 :root {
   ---header-offset: 80px;
+  ---round-2-header-offset: 10rem;
   ---header-z-index: 100;
   ---primary-accent-color: #212529;
 }
 
-.container {
-  margin-top: var(---header-offset);
-  padding: 24px;
+//.container {
+//  margin-top: var(---header-offset);
+//  padding: 24px;
+//
+//  border: 1px solid lightgray;
+//  border-radius: 12px;
+//  background-color: rgba(lightgray, 0.25);
+//}
 
-  border: 1px solid lightgray;
-  border-radius: 12px;
-  background-color: rgba(lightgray, 0.25);
+.second-header-offset {
+  margin-top: var(---round-2-header-offset);
 }
 
-.btn {
-  padding: 8px;
-  font-weight: bold;
+.wonder-button {
+  background-color: #f6c344;
+  border-radius: 4px;
+  padding: 0.125rem 1rem;
+  border: none;
 }
 
-.btn {
-  border-radius: 12px;
-}
+//.btn {
+//  padding: 8px;
+//  font-weight: bold;
+//}
+//
+//.btn {
+//  border-radius: 12px;
+//}
 
 .card {
   border-radius: 12px;
