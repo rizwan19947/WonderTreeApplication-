@@ -32,10 +32,34 @@
 
 <div class="container second-header-offset facilitator-container">
   <div class="facilitator-header-grid">
+
     <div class="first-column">
-      <h1>Facilitators</h1>
-      <button class="wonder-button add-fac">Add Facilitator</button>
+      <div>
+        <h1>Facilitators</h1>
+      </div>
+      <div class="flex-row">
+        <button class="wonder-button add-fac">Add Facilitator</button>
+      </div>
+      <div class="facilitator-list-container">
+        <div *ngFor="let facilitator of facilitators" class="facilitator-card curved-border">
+          <div class="facilitator-info">
+            {{ facilitator.firstName + ' ' + facilitator.lastName }}
+            <br/>
+            <p> {{ facilitator.email }} </p>
+          </div>
+          <div class="manage-players">
+            <button class="wonder-button view-players">
+              View Assigned Players
+            </button>
+            <button class="wonder-button remove">
+              Remove
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
+
+
     <div>
       <h1>Players</h1>
       <div class="custom-dropdown">

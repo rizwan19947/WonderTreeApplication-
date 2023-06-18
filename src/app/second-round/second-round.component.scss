@@ -1,5 +1,47 @@
 :host {
 
+  .remove {
+    color: white;
+    background-color: #cb444a;
+  }
+
+  .view-players {
+    color: white;
+    background-color: #2a64f6;
+    margin-right: 0.5rem;
+  }
+
+  .facilitator-info {
+    font-size: 1rem;
+    line-height: 1rem;
+    font-family: "Roboto Light", sans-serif;
+    font-weight: bold;
+  }
+
+  p {
+    margin: 0;
+    font-family: "Roboto Light", sans-serif;
+    font-weight: normal;
+    font-size: 0.75rem;
+  }
+
+  .facilitator-card {
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    background-color: #f6f6f6;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    justify-content: space-between;
+  }
+
+  .facilitator-list-container {
+    padding-top: 1rem;
+    width: 100%;
+    height: 90%;
+    overflow-y: auto;
+  }
+
   .curved-border {
     border-radius: 4px;
   }
@@ -69,10 +111,7 @@
   }
 
   .add-fac {
-    position: absolute;
-    top: 1.5rem;
-    transform: translateY(-50%);
-    right: 0;
+    float: right;
     min-width: 12rem;
   }
 
