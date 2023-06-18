@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {SecondRoundComponent} from "./second-round/second-round.component";
+import { SecondRoundComponent } from "./second-round/second-round.component";
 
 const routes: Routes = [
   {

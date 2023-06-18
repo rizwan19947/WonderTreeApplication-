@@ -11,13 +11,14 @@ import { HomeModule } from './home/home.module';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { CoreModule } from './@core/core.module';
 import { HttpClientModule } from '@angular/common/http';
+import { SecondRoundComponent } from "./second-round/second-round.component";
 
 export const FirestoreInstance = new InjectionToken<Firestore>(
   'FirestoreInstance'
 );
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, SecondRoundComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
